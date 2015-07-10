@@ -1,0 +1,62 @@
+
+
+<div ng-controller="ViewController as view">
+    <div layout="row" layout-sm="column" layout-align="space-around" ng-hide="view.circular">
+        <md-progress-circular md-mode="indeterminate" class="md-hue-3"></md-progress-circular>
+    </div>
+    <div class="CSSTableGenerator" ng-hide="view.table">
+        <table>
+            <tr style="  height: 35px;">
+                <th>
+                    Id
+                </th>
+                <th >
+                    Name
+                </th>
+                <th >
+                    Phone
+                </th>
+                <th >
+                    Email
+                </th>
+                <th >
+                    Address
+                </th>
+                <th >
+                    Edit
+                </th>
+                <th >
+                    Delete
+                </th>
+            </tr>
+            <tr ng-repeat="message in view.data | orderBy: 'name'">
+                <td>
+                    {{$index+1}}
+                </td>
+                <td >
+                    {{message.name}}
+                </td>
+                <td>
+                    {{message.phone}}
+                </td>
+                <td>
+                    {{message.email}}
+                </td>
+                <td>
+                    {{message.address}}
+                </td>
+                <td>
+                    <img src="./image/ic_mode_edit_24px.svg" ng-click="view.update(message.$id);">
+
+                </td>
+                <td>
+                    <img src="./image/ic_delete_24px.svg" ng-click="view.data.$remove(message)">
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+
+
