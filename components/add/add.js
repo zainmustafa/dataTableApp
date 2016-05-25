@@ -2,7 +2,7 @@
  * Created by Administrator on 6/30/2015.
  */
 
-var app = angular.module('app.add', ['ngMaterial'])
+angular.module('app')
     .controller('AddController', function ($location) {
 
         var ref = new Firebase("https://panadatabase.firebaseio.com/messages/data");
@@ -21,6 +21,6 @@ var app = angular.module('app.add', ['ngMaterial'])
                 email: this.email,
                 address: this.address
             });
-            $location.path('/view');
+            $location.path('/');
         };
     });

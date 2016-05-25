@@ -20,7 +20,7 @@ var app = angular.module('app.edit', [])
                 email: this.myData.email,
                 address: this.myData.address
             });
-            $location.path('/view');
+            $location.path('/');
 
         };
 

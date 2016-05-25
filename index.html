@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -5,7 +6,7 @@
     <title>PanaDataBase</title>
 
     <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <script src="./bower_components/angular/angular.js"></script>
     <!-- Firebase -->
     <script src="./bower_components/firebase/firebase.js"></script>
@@ -17,9 +18,8 @@
     <!--New-Router-->
     <script src="./bower_components/angular-new-router/dist/router.es5.min.js"></script>
     <!--Script-->
-    <script src="app.js"></script>
+    <script src="app/app.js"></script>
     <!--Conpmonents-->
-    <script src="./components/login/login.js"></script>
     <script src="./components/home/home.js"></script>
     <script src="./components/view/view.js"></script>
     <script src="./components/add/add.js"></script>
@@ -28,50 +28,49 @@
 </head>
 <body ng-app="app" ng-controller="AppController as app">
 
-    <div layout="column" style="height: 100%">
-        <div flex="5"></div>
-        <div flex="85">
-            <div layout="column">
-                <div flex="20"></div>
-                <div flex="80">
-                    <div class="md-toolbar-tools" style="background-color: #00BBD4;  height: 80px;  margin-bottom: 50px;  width: 97.5%;">
-                        <div layout="row" style="width: 100%;">
-                            <div flex="15">
-                                <h4 class="md-display-1">Data<span class="heading">Base</span> App </h4>
-                            </div>
-                            <div flex="60"></div>
-                            <div flex="25" layout="row" style="margin-right: 100px;">
-                                <img ng-src="{{app.display}}" style="width: 60px;height: 50px;margin-top: 15px;margin-right: 20px;border-radius: 50%;">
-                                <p class="md-display-1" style="margin-top: 20px;">{{app.name}}</p>
-                                <img src="./image/login.svg" ng-click="app.getLogIn()" style="height: 40px; width: 50px;   margin-top: 20px;">
-                            </div>
+<div layout="column" style="height: 100%">
+    <div flex="5"></div>
+    <div flex="85">
+        <div layout="column">
+            <div flex="20"></div>
+            <div flex="80">
+                <div class="md-toolbar-tools" style="background-color: #00BBD4;  height: 80px;  margin-bottom: 50px;  width: 97.5%;">
+                    <div layout="row" style="width: 100%;">
+                        <div flex="15">
+                            <h4 class="md-display-1">Data<span class="heading">Base</span> App </h4>
                         </div>
-                    </div>
-                    <div layout="row" style="height: 100%;">
-                        <div flex="10"></div>
-                        <div flex="80">
-                            <md-whiteframe class="md-whiteframe-z2" layout="column" layout-align="start center" style="height: 500px;">
-                                <div layout="column" style="">
-                                    <div flex="20"  style="margin-bottom: 40px">
-                                            <section layout="row" layout-align="center center">
-                                                <md-button class="md-raised md-primary groupX left" ng-click="app.goToAdd()" >Add</md-button>
-                                                <md-button class="md-raised md-primary groupX middle" ng-click="app.goToView()" >View</md-button>
-                                                <md-button class="md-raised md-primary groupX right" ng-click="app.goToHome()" >About</md-button>
-                                            </section>
-                                    </div>
-                                    <div flex="80">
-                                        <ng-viewport></ng-viewport>
-                                    </div>
-                                </div>
-                            </md-whiteframe>
+                        <div flex="70"></div>
+                        <div flex="15" layout="row" style="margin-right: 100px;">
+                            <img src="./image/me.png" style="width: 50px;height: 50px;margin-top: 15px;margin-right: 20px;border-radius: 50%;">
+                            <p class="md-display-1">Zain Mustafa</p>
                         </div>
-                        <div flex="10"></div>
                     </div>
                 </div>
-                <div flex="20"></div>
+                <div layout="row" style="height: 100%;">
+                    <div flex="10"></div>
+                    <div flex="80">
+                        <md-whiteframe class="md-whiteframe-z2" layout="column" layout-align="start center" style="height: 500px;">
+                            <div layout="column" style="">
+                                <div flex="20"  style="margin-bottom: 40px">
+                                    <section layout="row" layout-align="center center">
+                                        <md-button class="md-raised md-primary groupX left" ng-click="app.goToAdd()" >Add</md-button>
+                                        <md-button class="md-raised md-primary groupX middle" ng-click="app.goToView()" >View</md-button>
+                                        <md-button class="md-raised md-primary groupX right" ng-click="app.goToHome()" >About</md-button>
+                                    </section>
+                                </div>
+                                <div flex="80">
+                                    <ng-viewport></ng-viewport>
+                                </div>
+                            </div>
+                        </md-whiteframe>
+                    </div>
+                    <div flex="10"></div>
+                </div>
             </div>
+            <div flex="20"></div>
         </div>
-        <div flex="10"></div>
     </div>
+    <div flex="10"></div>
+</div>
 </body>
 </html>

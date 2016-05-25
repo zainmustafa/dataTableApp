@@ -4,7 +4,7 @@ var displayName = "";
  * Created by Administrator on 6/30/2015.
  */
 
-var app = angular.module('app.login', ['ngMaterial','firebase'])
+angular.module('app')
     .controller('LoginController', function ($location) {
 
 

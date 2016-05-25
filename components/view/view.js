@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 6/30/2015.
  */
-var app = angular.module('app.view', ['firebase'])
+angular.module('app')
     .controller('ViewController', function ($firebaseArray, $location) {
 
         this.data = [];
@@ -14,10 +14,10 @@ var app = angular.module('app.view', ['firebase'])
         this.data = $firebaseArray(ref);
         this.data.$loaded()
             .then(
-            function () {
-                that.circular = true;
-                that.table = false;
-            });
+                function () {
+                    that.circular = true;
+                    that.table = false;
+                });
         this.update = function (id) {
             $location.path('/view/edit/' + id);
             counter = 1;
